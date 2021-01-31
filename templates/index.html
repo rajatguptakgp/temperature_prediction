@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+<style>
+h1 {text-align: center;}
+h4 {text-align: center;}
+</style>  
+</head>
+
+<body>
+ <div class="login">
+	<h1>End-point temperature prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+   	<h4><b>{{ prediction_text }}</b></h4>
+  	<br>
+    	Target Temperature:&ensp;<input type="number" name="target" step="any" required="required" value=1650 />
+	<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+	<br>
+	<br>
+        X1:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="number" step="any" name="x1" required="required" value=5.034 />
+	<br>
+	<br>
+	X2:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="number" step="any" name="x2" required="required" value=0.0 />
+	<br>
+	<br>
+	X3:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="number" step="any" name="x3" required="required" value=7787.00 />
+	<br>
+	<br>
+	X4:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="number" step="any" name="x4" required="required" value=1350.00 />
+	<br>
+	<br>
+        X5:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="number" step="any" name="x5" required="required" value=0.0463 />
+	<br>
+	<br>
+	X6:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="number" step="any" name="x6" required="required" value=169.094 />
+	<br>
+	<br>
+	X7:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="number" step="any" name="x7" required="required" value=8.345 />
+	<br>
+	<br>
+	X8:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="number" step="any" name="x8" required="required" value=3.917 />
+	<br>
+	<br>
+        X9:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="number" step="any" name="x9" required="required" value=0.449 />
+	<br>
+	<br>
+	X10:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x10" required="required" value=1115.00 />
+	<br>
+	<br>
+	X11:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x11" required="required" value=0.00 />
+	<br>
+	<br>
+	X12:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x12" required="required" value=68.00 />
+	<br>
+	<br>
+        X13:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x13" required="required" value=2.00 />
+	<br>
+	<br>
+	X14:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x14" required="required" value=0.1950 />
+	<br>
+	<br>
+	X15:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x15" required="required" value=270.00 />
+	<br>
+	<br>
+	X16:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x16" required="required" value=264.89 />
+	<br>
+	<br>
+        X17:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x17" required="required" value=-0.65 />
+	<br>
+	<br>
+	X18:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x18" required="required" value=1.00 />
+	<br>
+	<br>
+	X19:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x19" required="required" value=1916.00 />
+	<br>
+	<br>
+	X20:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x20" required="required" value=5019.88 />
+	<br>
+	<br>
+        X21:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x21" required="required" value=0.00 />
+	<br>
+	<br>
+	X22:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x22" required="required" value=13443.00 />
+	<br>
+	<br>
+	X23:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x23" required="required" value=4.00 />
+	<br>
+	<br>
+	X24:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="number" step="any" name="x24" required="required" value=2.00 />
+    </form>
+
+ </div>
+
+
+</body>
+</html>
