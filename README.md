@@ -1,3 +1,3 @@
 # End-point steel temperature prediction
 
-Weblink: https://steel-temp-prediction.herokuapp.com
+Web-app link: https://steel-temp-prediction.herokuapp.com
